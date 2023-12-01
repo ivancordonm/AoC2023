@@ -40,19 +40,6 @@ fun part2(document: List<String>): Int {
     )
 
     val pattern = numbers.keys.joinToString("|").toRegex()
-
-    //    val result = mutableListOf<Int>()
-    //    for (line: String in document) {
-    //        val values = mutableListOf<Int>()
-    //        for (i in line.length - 1 downTo 0) {
-    //            pattern.find(line.substring(i))?.let {
-    //                values.add(numbers[it.value]!!)
-    //            }
-    //        }
-    //        result.add("${values.last()}${values.first()}".toInt())
-    //    }
-    //    return result.sum()
-
     return document.sumOf { line ->
         line.mapIndexedNotNull { index, _ ->
             pattern.find(line.substring(line.length - 1 - index))?.value
