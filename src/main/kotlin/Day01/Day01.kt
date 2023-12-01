@@ -17,8 +17,8 @@ fun main() {
 
 }
 
-fun part1(document: List<String>): Int {
-    return document.sumOf { it -> it.filter { it.isDigit() }.let { "${it.first()}${it.last()}".toInt() } }
+fun part1(document: List<String>) = document.sumOf { it ->
+    it.filter { it.isDigit() }.let { "${it.first()}${it.last()}".toInt() }
 }
 
 fun part2(document: List<String>): Int {
