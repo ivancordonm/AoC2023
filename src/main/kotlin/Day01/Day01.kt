@@ -1,8 +1,12 @@
+package Day01
+
+import readInput
+
 fun main() {
 
-    val test1Input = readInput("main/kotlin/Day01_p1_test")
-    val test1p2Input = readInput("main/kotlin/Day01_p2_test")
-    val input = readInput("main/kotlin/Day01")
+    val test1Input = readInput("main/kotlin/Day01/Day01_p1_test")
+    val test1p2Input = readInput("main/kotlin/Day01/Day01_p2_test")
+    val input = readInput("main/kotlin/Day01/Day01")
 
     check(part1(test1Input) == 142)
     println(part1(input))
