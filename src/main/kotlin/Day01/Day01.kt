@@ -23,6 +23,7 @@ fun part1(document: List<String>) = document.sumOf { it ->
 
 fun part2(document: List<String>): Int {
     val numbers = mapOf(
+
         "1" to 1,
         "2" to 2,
         "3" to 3,
