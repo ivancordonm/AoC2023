@@ -20,8 +20,8 @@ fun part1(board: List<String>) = board.foldIndexed(0) { index, acc, s ->
     acc + if (sets.contains(true)) 0 else index + 1
 }
 
-fun part2(board: List<String>) = board.fold(0) { acc, s ->
-    acc + s.split(":").last().trim().split(";").map { it.getSet() }.power()
+fun part2(board: List<String>) = board.sumOf { s ->
+    s.split(":").last().trim().split(";").map { it.getSet() }.power()
 }
 
 fun List<Map<String, Int>>.power() = fold(mapOf("red" to 0, "green" to 0, "blue" to 0)) { acc, map ->
